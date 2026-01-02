@@ -5,7 +5,7 @@ import dotenv = require("dotenv");
 import connectDB from './utils/db';
 import authRoutes from './routes/auth';
 import cookieParser = require("cookie-parser")
-
+import habitRoutes from "./routes/habit"
 
 dotenv.config()
 
@@ -26,7 +26,7 @@ app.get('/', (_req, res) => {
 
 
 app.use("/api/auth",authRoutes)
-
+app.use("/api/habits",habitRoutes)
 
 
 
